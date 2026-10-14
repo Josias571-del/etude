@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<h lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<>
+      <section
+      class="w-[100%] h-[100vh] bg-violet-600 sm:bg-white flex justify-center items-center"
+    >
+      <section
+        id="sectionchargement"
+        class="flex justify-center bg-white flex-col items-center w-[95%] h-[95vh]"
+      >
+        <h1 class="text-violet-600 text-5xl font-bold">Chargement</h1>
+        <div
+          class="w-[50%] h-[5vh] fixed sm:bottom-112 bottom-85 sm:left-235 left-45 text-9xl"
+          id="divspan"
+        >
+          <span class="text-6xl" id="span1"></span>
+        </div>
+      </section>
+    </section>
+
+    <script>
+      const span1 = document.getElementById("span1");
+      const divspan = document.getElementById("divspan");
+      // const sect1=document.getElementById("sect1");
+
+      let compteur = 0;
+      const interval = setInterval(() => {
+        compteur++;
+        span1.textContent = ".".repeat(compteur);
+        if (compteur === 3) clearInterval(interval);
+      }, 1000);
+
+      setTimeout(() => {
+        divspan.style.display = "none";
+        sect1.style.display = "block";
+      }, 3000);
+
+      setTimeout(() => {
+        window.location.href = "./main.html";
+      }, 3000);
+    </script>
+
+    
+</body>
+</html>
