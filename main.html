@@ -2,10 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
+    <script>
+      const span1 = document.getElementById("span1");
+      const divspan = document.getElementById("divspan");
+      // const sect1=document.getElementById("sect1");
+
+      let compteur = 0;
+      const interval = setInterval(() => {
+        compteur++;
+        span1.textContent = ".".repeat(compteur);
+        if (compteur === 3) clearInterval(interval);
+      }, 1000);
+
+      setTimeout(() => {
+        divspan.style.display = "none";
+        sect1.style.display = "block";
+      }, 2000);
+
+      setTimeout(() => {
+        window.location.href = "./main.html";
+      }, 3000);
+    </script>
     
 </body>
 </html>
